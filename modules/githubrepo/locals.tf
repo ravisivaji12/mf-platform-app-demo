@@ -9,7 +9,6 @@ locals {
       }
     }
   ]...)
-
   branches_to_protect = {
     main = {
       required_status_checks = {
@@ -49,36 +48,5 @@ locals {
         settings  = settings
       }
     }
-  ]...)
-
-  # branch_restrictions = {
-  #   main = {
-  #     teams = ["devops"]
-  #     users = ["alice"]
-  #     apps  = []
-  #   }
-  #   dev = {
-  #     teams = ["qa"]
-  #     users = ["bob", "carol"]
-  #     apps  = []
-  #   }
-  #   release = {
-  #     teams = []
-  #     users = ["dave"]
-  #     apps  = ["ci-app"]
-  #   }
-  # }
-
-  # branch_restriction_targets = merge([
-  #   for repo_key, repo in github_repository.new_repo : {
-  #     for branch, rules in local.branch_restrictions :
-  #     "${repo_key}-${branch}" => {
-  #       repo_name = repo.name
-  #       branch    = branch
-  #       teams     = rules.teams
-  #       users     = rules.users
-  #       apps      = rules.apps
-  #     }
-  #   }
-  # ]...)
+  ]...)  
 }

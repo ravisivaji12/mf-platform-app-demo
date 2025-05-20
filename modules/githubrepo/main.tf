@@ -22,67 +22,6 @@ resource "github_repository" "new_repo" {
   }
 }
 
-# resource "github_branch_protection" "main" {
-#   for_each      = github_repository.new_repo
-#   repository_id = each.value.node_id
-#   pattern       = "main"
-
-#   required_status_checks {
-#     strict   = true
-#     contexts = ["Lint", "Security Scan", "Build & Test"]
-#   }
-
-#   enforce_admins = true
-
-#   required_pull_request_reviews {
-#     dismiss_stale_reviews      = true
-#     require_code_owner_reviews = true
-#   }
-# }
-
-# locals {
-#    branches_to_protect = {
-#     main = {
-#       required_status_checks = {
-#         strict   = true
-#         contexts = ["Lint", "Security Scan", "Build & Test"]
-#       }
-#       enforce_admins               = true
-#       dismiss_stale_reviews        = true
-#       require_code_owner_reviews   = true
-#     }
-#     dev = {
-#       required_status_checks = {
-#         strict   = false
-#         contexts = []
-#       }
-#       enforce_admins               = false
-#       dismiss_stale_reviews        = true
-#       require_code_owner_reviews   = false
-#     }
-#     release = {
-#       required_status_checks = {
-#         strict   = true
-#         contexts = ["Build"]
-#       }
-#       enforce_admins               = false
-#       dismiss_stale_reviews        = true
-#       require_code_owner_reviews   = false
-#     }
-#   }
-
-#   branch_protections = merge([
-#     for repo_key, repo in github_repository.new_repo : {
-#       for branch, settings in local.branches_to_protect :
-#       "${repo_key}-${branch}" => {
-#         repo_name = repo.name
-#         branch    = branch
-#         settings  = settings
-#       }
-#     }
-#   ]...)
-# }
-
 resource "github_branch_protection" "per_branch" {
   for_each = local.branch_protections
 
@@ -101,23 +40,7 @@ resource "github_branch_protection" "per_branch" {
     require_code_owner_reviews = each.value.settings.require_code_owner_reviews
   }
 
-  # restrictions {
-  #   users = []
-  #   teams = []
-  #   apps  = []
-  # }
 }
-
-# resource "github_branch_restriction" "per_branch" {
-#   for_each = local.branch_restriction_targets
-
-#   repository = each.value.repo_name
-#   branch     = each.value.branch
-
-#   teams = each.value.teams
-#   users = each.value.users
-#   apps  = each.value.apps
-# }
 
 resource "github_actions_secret" "repo_wise_secrets" {
   for_each = local.flattened_repo_secrets
