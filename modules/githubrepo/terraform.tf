@@ -1,4 +1,4 @@
-terraform {  
+terraform {
   required_providers {
     random = {
       source  = "hashicorp/random"
@@ -12,5 +12,5 @@ terraform {
   required_version = ">= 1.1.0"
 }
 provider "github" {
-  token = var.github_token != "" ? var.github_token : getenv("GITHUB_TOKEN")  
+  token = var.github_token != "" ? var.github_token : getenv("GITHUB_TOKEN")
 }

@@ -1,7 +1,7 @@
 variable "github_token" {
-  type = string
+  type        = string
   description = "GitHub token for for accessing and provision repos using automation"
-  nullable = false
+  nullable    = false
 }
 
 variable "github_organization" {
@@ -17,7 +17,7 @@ variable "template_repo" {
 variable "new_repo_name" {
   description = "Name of the new repository"
   type        = list(string)
-  default = ["mf-mdm-landing-zone-one", " mf-mdm-landing-zone-two", "mf-mdm-landing-zone-three"]
+  default     = []
 }
 variable "repo_visibility" {
   description = "Visibility of the repository (private/public)"
@@ -25,13 +25,23 @@ variable "repo_visibility" {
   default     = "public"
 }
 
-variable "secrets" {
-  description = "Map of secret names and values"
-  type        = map(string)
+variable "repo_secrets" {
+  description = "Map of repositories and their secrets"
+  type        = map(map(string))
 }
 
-variable "secret_visibility" {
-  description = "Visibility of the secret (private, selected, or all)"
-  type        = string
-  default     = "private"
+variable "repo_user_collaborators" {
+  description = "Map of users to be added to specific repos"
+  type = map(list(object({
+    username   = string
+    permission = string
+  })))
+}
+
+variable "repo_team_collaborators" {
+  description = "Map of teams to repos and permissions"
+  type = map(list(object({
+    team_slug  = string
+    permission = string
+  })))
 }
