@@ -48,5 +48,32 @@ locals {
         settings  = settings
       }
     }
-  ]...)  
+  ]...)
+
+  # Create a flattened map of workspaces using merge and for expressions
+  workspace_map = merge([
+    for project_name, project_data in var.projects : {
+      for workspace_name, ws_data in project_data.workspaces :
+      "${project_name}-${workspace_name}" => {
+        project_name   = project_name
+        workspace_name = workspace_name
+        vcs_repo       = ws_data.vcs_repo
+      }
+    }
+  ]...)
+
+  # Flatten workspace variables with merge
+  workspace_vars = merge([
+    for project_name, project_data in var.projects : merge([
+      for workspace_name, ws_data in project_data.workspaces : {
+        for var_key, var_val in ws_data.tf_vars :
+        "${project_name}-${workspace_name}-${var_key}" => {
+          workspace_key = "${project_name}-${workspace_name}"
+          key           = var_key
+          value         = var_val
+        }
+      }
+    ]...)
+  ]...)
 }
+
