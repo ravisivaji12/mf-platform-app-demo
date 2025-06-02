@@ -54,7 +54,7 @@ EOT
 }
 
 repo_user_collaborators = {
-  #   "mf-mdm-landing-zone1" = [
+  #   "mf-mdm-landing-zone1a" = [
   #     {
   #       username   = "raavisivaji12"
   #       permission = "admin"
