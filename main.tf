@@ -133,7 +133,7 @@ resource "tfe_project" "projects" {
   for_each     = var.projects
   name         = each.key
   organization = var.tfc_organization
-  depends_on = [ github_repository.new_repo ]
+  depends_on   = [github_repository.new_repo]
 }
 resource "tfe_workspace" "workspaces" {
   for_each = local.workspace_map
@@ -159,7 +159,7 @@ resource "tfe_variable" "tfvars" {
   workspace_id = tfe_workspace.workspaces[each.value.workspace_key].id
   sensitive    = true
   category     = "env"
-  depends_on = [ tfe_workspace.workspaces ]
+  depends_on   = [tfe_workspace.workspaces]
 }
 
 ################ Azure Federated credentials Generation ##################################################
@@ -177,7 +177,7 @@ resource "azuread_application_federated_identity_credential" "tfc_federated_cred
   audiences             = [var.tfc_azure_audience]
   issuer                = "https://${var.tfc_hostname}"
   subject               = "organization:${var.tfc_organization_name}:project:${each.value.project_name}:workspace:${each.value.workspace_name}:run_phase:plan"
-  depends_on = [ tfe_project.projects, tfe_workspace.workspaces ]
+  depends_on            = [tfe_project.projects, tfe_workspace.workspaces]
 }
 
 # Federated identity credential for apply phase
@@ -189,7 +189,7 @@ resource "azuread_application_federated_identity_credential" "tfc_federated_cred
   audiences             = [var.tfc_azure_audience]
   issuer                = "https://${var.tfc_hostname}"
   subject               = "organization:${var.tfc_organization_name}:project:${each.value.project_name}:workspace:${each.value.workspace_name}:run_phase:apply"
-  depends_on = [ tfe_project.projects, tfe_workspace.workspaces ]
+  depends_on            = [tfe_project.projects, tfe_workspace.workspaces]
 }
 
 # Assign Contributor role to the existing service principal

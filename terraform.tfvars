@@ -73,36 +73,36 @@ repo_user_collaborators = {
 }
 
 repo_team_collaborators = {
-  "mf-dt-azrabc-sampleapp-infra-repo" = [
-    {
-      team_slug  = "Platform-Vendor-TechM-Admin"
-      permission = "admin"
-    },
-    {
-      team_slug  = "DevOps"
-      permission = "push"
-    }
-  ],
-  "mf-dt-azrabc-sampleapp-foundation-repo" = [
-    {
-      team_slug  = "Platform-Vendor-TechM-Admin"
-      permission = "admin"
-    },
-    {
-      team_slug  = "DevOps"
-      permission = "push"
-    }
-  ]
-  "mf-dt-azrabc-sampleapp-app-repo" = [
-    {
-      team_slug  = "Platform-Vendor-TechM-Admin"
-      permission = "admin"
-    },
-    {
-      team_slug  = "DevOps"
-      permission = "push"
-    }
-  ]
+  # "mf-dt-azrabc-sampleapp-infra-repo" = [
+  #   {
+  #     team_slug  = "Platform-Vendor-TechM-Admin"
+  #     permission = "admin"
+  #   },
+  #   {
+  #     team_slug  = "DevOps"
+  #     permission = "push"
+  #   }
+  # ],
+  # "mf-dt-azrabc-sampleapp-foundation-repo" = [
+  #   {
+  #     team_slug  = "Platform-Vendor-TechM-Admin"
+  #     permission = "admin"
+  #   },
+  #   {
+  #     team_slug  = "DevOps"
+  #     permission = "push"
+  #   }
+  # ]
+  # "mf-dt-azrabc-sampleapp-app-repo" = [
+  #   {
+  #     team_slug  = "Platform-Vendor-TechM-Admin"
+  #     permission = "admin"
+  #   },
+  #   {
+  #     team_slug  = "DevOps"
+  #     permission = "push"
+  #   }
+  # ]
 }
 
 tfc_organization = ""
@@ -138,6 +138,6 @@ projects = {
         }
       }
     }
-  }  
+  }
 }
 existing_aad_app_display_name = "Terraform MF Core Infrastructure Prod"

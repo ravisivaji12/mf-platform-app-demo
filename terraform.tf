@@ -34,6 +34,6 @@ provider "tfe" {
 }
 provider "azurerm" {
   features {}
-  subscription_id            = "bbca0db0-25fe-49b8-a089-49933a07c849"
+  subscription_id = "abd34832-7708-43f9-a480-e3b7a87b41d7"
   #skip_provider_registration = true
 }
