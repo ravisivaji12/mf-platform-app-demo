@@ -66,7 +66,7 @@ repo_user_collaborators = {
   #   ],
   #   "mf-mdm-landing-zone2" = [
   #     {
-  #       username   = "maxim"
+  #       username   = "Raavi"
   #       permission = "pull"
   #     }
   #   ]
