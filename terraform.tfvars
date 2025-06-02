@@ -1,6 +1,6 @@
-github_token = ""
+github_token = "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"
 
-github_organization = "McCainFoods"
+github_organization = "ravisivaji12"
 # template_repo       = "mf-mdm-landing-zone"
 # new_repo_name       = ["mf-mdm-landing-zone1", "mf-mdm-landing-zone2"]
 new_repo_name = {
@@ -12,42 +12,42 @@ repo_visibility = "private"
 
 repo_secrets = {
   "mf-dt-azrabc-sampleapp-foundation-repo" = {
-    "GH_TOKEN"              = ""
-    "AZURE_SUBSCRIPTION_ID" = ""
-    "TF_API_TOKEN"          = ""
+    "GH_TOKEN"              = "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"
+    "AZURE_SUBSCRIPTION_ID" = "abd34832-7708-43f9-a480-e3b7a87b41d7"
+    "TF_API_TOKEN"          = "O6K8plKjfiIbiw.atlasv1.WBIp2toUChHLyoKldKgYUVmZYBEcjSnFn8hjbNGYQClXFXEs6j6yBU0FcZtK8vrXkzE"
     "AZURE_CREDENTIALS"     = <<EOT
 {
-  "clientId": "",
-  "clientSecret": "",
-  "subscriptionId": "",
-  "tenantId": ""
+  "clientId": "6d7daf56-5b56-41a6-9a6d-50bea2ca68b0",
+  "clientSecret": "0gh8Q~1OYaTHAR4mfZc8egRSA6~Nv0IYZkHVUcTd",
+  "subscriptionId": "abd34832-7708-43f9-a480-e3b7a87b41d7",
+  "tenantId": "fd036ad5-08f1-4dab-947b-3b6f9462e84d"
 }
 EOT
   }
 
   "mf-dt-azrabc-sampleapp-infra-repo" = {
-    "GH_TOKEN"              = ""
-    "AZURE_SUBSCRIPTION_ID" = ""
-    "TF_API_TOKEN"          = ""
+    "GH_TOKEN"              = "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"
+    "AZURE_SUBSCRIPTION_ID" = "abd34832-7708-43f9-a480-e3b7a87b41d7"
+    "TF_API_TOKEN"          = "O6K8plKjfiIbiw.atlasv1.WBIp2toUChHLyoKldKgYUVmZYBEcjSnFn8hjbNGYQClXFXEs6j6yBU0FcZtK8vrXkzE"
     "AZURE_CREDENTIALS"     = <<EOT
 {
-  "clientId": "",
-  "clientSecret": "",
-  "subscriptionId": "",
-  "tenantId": ""
+  "clientId": "6d7daf56-5b56-41a6-9a6d-50bea2ca68b0",
+  "clientSecret": "0gh8Q~1OYaTHAR4mfZc8egRSA6~Nv0IYZkHVUcTd",
+  "subscriptionId": "abd34832-7708-43f9-a480-e3b7a87b41d7",
+  "tenantId": "fd036ad5-08f1-4dab-947b-3b6f9462e84d"
 }
 EOT
   }
   "mf-dt-azrabc-sampleapp-app-repo" = {
-    "GH_TOKEN"              = ""
-    "AZURE_SUBSCRIPTION_ID" = ""
-    "TF_API_TOKEN"          = ""
+    "GH_TOKEN"              = "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"
+    "AZURE_SUBSCRIPTION_ID" = "abd34832-7708-43f9-a480-e3b7a87b41d7"
+    "TF_API_TOKEN"          = "O6K8plKjfiIbiw.atlasv1.WBIp2toUChHLyoKldKgYUVmZYBEcjSnFn8hjbNGYQClXFXEs6j6yBU0FcZtK8vrXkzE"
     "AZURE_CREDENTIALS"     = <<EOT
 {
-  "clientId": "",
-  "clientSecret": "",
-  "subscriptionId": "",
-  "tenantId": ""
+  "clientId": "6d7daf56-5b56-41a6-9a6d-50bea2ca68b0",
+  "clientSecret": "0gh8Q~1OYaTHAR4mfZc8egRSA6~Nv0IYZkHVUcTd",
+  "subscriptionId": "abd34832-7708-43f9-a480-e3b7a87b41d7",
+  "tenantId": "fd036ad5-08f1-4dab-947b-3b6f9462e84d"
 }
 EOT
   }
@@ -106,7 +106,7 @@ repo_team_collaborators = {
 }
 
 tfc_organization = ""
-tfe_token        = ""
+tfe_token        = "O6K8plKjfiIbiw.atlasv1.WBIp2toUChHLyoKldKgYUVmZYBEcjSnFn8hjbNGYQClXFXEs6j6yBU0FcZtK8vrXkzE"
 
 projects = {
   mf-dt-azrabc-sampleapp-tfcprj = {
@@ -114,27 +114,27 @@ projects = {
       mf-dt-azrabc-sampleapp-foundation-tfcws = {
         vcs_repo = "mf-dt-azrabc-sampleapp-foundation-repo"
         tf_vars = {
-          ARM_SUBSCRIPTION_ID     = ""
-          ARM_CLIENT_ID           = ""
-          ARM_TENANT_ID           = ""
+          ARM_SUBSCRIPTION_ID     = "abd34832-7708-43f9-a480-e3b7a87b41d7"
+          ARM_CLIENT_ID           = "6d7daf56-5b56-41a6-9a6d-50bea2ca68b0"
+          ARM_TENANT_ID           = "fd036ad5-08f1-4dab-947b-3b6f9462e84d"
           TFC_AZURE_PROVIDER_AUTH = "true"
-          GITHUB_TOKEN            = ""
-          ARM_CLIENT_SECRET       = ""
-          AAD_CLIENT_SECRET       = ""
-          TFC_AZURE_RUN_CLIENT_ID = ""
+          GITHUB_TOKEN            = "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"
+          ARM_CLIENT_SECRET       = "0gh8Q~1OYaTHAR4mfZc8egRSA6~Nv0IYZkHVUcTd"
+          AAD_CLIENT_SECRET       = "0gh8Q~1OYaTHAR4mfZc8egRSA6~Nv0IYZkHVUcTd"
+          TFC_AZURE_RUN_CLIENT_ID = "6d7daf56-5b56-41a6-9a6d-50bea2ca68b0"
         }
       }
       mf-dt-azrabc-sampleapp-dev-tfcws = {
         vcs_repo = "mf-dt-azrabc-sampleapp-infra-repo"
         tf_vars = {
-          ARM_SUBSCRIPTION_ID     = ""
-          ARM_CLIENT_ID           = ""
-          ARM_TENANT_ID           = ""
+          ARM_SUBSCRIPTION_ID     = "abd34832-7708-43f9-a480-e3b7a87b41d7"
+          ARM_CLIENT_ID           = "6d7daf56-5b56-41a6-9a6d-50bea2ca68b0"
+          ARM_TENANT_ID           = "fd036ad5-08f1-4dab-947b-3b6f9462e84d"
           TFC_AZURE_PROVIDER_AUTH = "true"
-          GITHUB_TOKEN            = ""
-          ARM_CLIENT_SECRET       = ""
-          AAD_CLIENT_SECRET       = ""
-          TFC_AZURE_RUN_CLIENT_ID = ""
+          GITHUB_TOKEN            = "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"
+          ARM_CLIENT_SECRET       = "0gh8Q~1OYaTHAR4mfZc8egRSA6~Nv0IYZkHVUcTd"
+          AAD_CLIENT_SECRET       = "0gh8Q~1OYaTHAR4mfZc8egRSA6~Nv0IYZkHVUcTd"
+          TFC_AZURE_RUN_CLIENT_ID = "6d7daf56-5b56-41a6-9a6d-50bea2ca68b0"
         }
       }
     }

@@ -146,7 +146,7 @@ resource "tfe_workspace" "workspaces" {
   #   identifier                 = each.value.vcs_repo
   #   branch                     = "main"
   #   ingress_submodules         = true
-  #   github_app_installation_id = "ghaot-TpZu1FvmCrvdjchE"
+  #   github_app_installation_id = "ghain-unDQUMYRU8u95NHL"
   # }
   execution_mode = "remote"
   depends_on     = [tfe_project.projects]
