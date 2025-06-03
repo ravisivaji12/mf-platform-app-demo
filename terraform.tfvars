@@ -1,4 +1,4 @@
-github_token = "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"
+github_token = "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"
 
 github_organization = "ravisivaji12"
 # template_repo       = "mf-mdm-landing-zone"
@@ -8,13 +8,13 @@ new_repo_name = {
   "mf-dt-azrabc-sampleapp-infra-repo"      = "mf-platform-azure-virtual-machine-linux"
   "mf-dt-azrabc-sampleapp-app-repo"        = "mf-core-networking"
 }
-repo_visibility = "private"
+repo_visibility = "public"
 
 repo_secrets = {
   "mf-dt-azrabc-sampleapp-foundation-repo" = {
-    "GH_TOKEN"              = "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"
+    "GH_TOKEN"              = "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"
     "AZURE_SUBSCRIPTION_ID" = "abd34832-7708-43f9-a480-e3b7a87b41d7"
-    "TF_API_TOKEN"          = "O6K8plKjfiIbiw.atlasv1.WBIp2toUChHLyoKldKgYUVmZYBEcjSnFn8hjbNGYQClXFXEs6j6yBU0FcZtK8vrXkzE"
+    "TF_API_TOKEN"          = "7wnuRz02cgyYhQ.atlasv1.BGptGRc3zyfGHLuOaxUHJLInkozHQMd09zHRJlzWSIxXY793ZAeoCdQBcwzwICxzIgE"
     "AZURE_CREDENTIALS"     = <<EOT
 {
   "clientId": "6d7daf56-5b56-41a6-9a6d-50bea2ca68b0",
@@ -28,7 +28,7 @@ EOT
   "mf-dt-azrabc-sampleapp-infra-repo" = {
     "GH_TOKEN"              = "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"
     "AZURE_SUBSCRIPTION_ID" = "abd34832-7708-43f9-a480-e3b7a87b41d7"
-    "TF_API_TOKEN"          = "O6K8plKjfiIbiw.atlasv1.WBIp2toUChHLyoKldKgYUVmZYBEcjSnFn8hjbNGYQClXFXEs6j6yBU0FcZtK8vrXkzE"
+    "TF_API_TOKEN"          = "7wnuRz02cgyYhQ.atlasv1.BGptGRc3zyfGHLuOaxUHJLInkozHQMd09zHRJlzWSIxXY793ZAeoCdQBcwzwICxzIgE"
     "AZURE_CREDENTIALS"     = <<EOT
 {
   "clientId": "6d7daf56-5b56-41a6-9a6d-50bea2ca68b0",
@@ -39,9 +39,9 @@ EOT
 EOT
   }
   "mf-dt-azrabc-sampleapp-app-repo" = {
-    "GH_TOKEN"              = "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"
+    "GH_TOKEN"              = "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"
     "AZURE_SUBSCRIPTION_ID" = "abd34832-7708-43f9-a480-e3b7a87b41d7"
-    "TF_API_TOKEN"          = "O6K8plKjfiIbiw.atlasv1.WBIp2toUChHLyoKldKgYUVmZYBEcjSnFn8hjbNGYQClXFXEs6j6yBU0FcZtK8vrXkzE"
+    "TF_API_TOKEN"          = "7wnuRz02cgyYhQ.atlasv1.BGptGRc3zyfGHLuOaxUHJLInkozHQMd09zHRJlzWSIxXY793ZAeoCdQBcwzwICxzIgE"
     "AZURE_CREDENTIALS"     = <<EOT
 {
   "clientId": "6d7daf56-5b56-41a6-9a6d-50bea2ca68b0",
@@ -105,8 +105,8 @@ repo_team_collaborators = {
   # ]
 }
 
-tfc_organization = ""
-tfe_token        = "O6K8plKjfiIbiw.atlasv1.WBIp2toUChHLyoKldKgYUVmZYBEcjSnFn8hjbNGYQClXFXEs6j6yBU0FcZtK8vrXkzE"
+tfc_organization = "SivajiRaavi"
+tfe_token        = "7wnuRz02cgyYhQ.atlasv1.BGptGRc3zyfGHLuOaxUHJLInkozHQMd09zHRJlzWSIxXY793ZAeoCdQBcwzwICxzIgE"
 
 projects = {
   mf-dt-azrabc-sampleapp-tfcprj = {
@@ -118,7 +118,7 @@ projects = {
           ARM_CLIENT_ID           = "6d7daf56-5b56-41a6-9a6d-50bea2ca68b0"
           ARM_TENANT_ID           = "fd036ad5-08f1-4dab-947b-3b6f9462e84d"
           TFC_AZURE_PROVIDER_AUTH = "true"
-          GITHUB_TOKEN            = "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"
+          GITHUB_TOKEN            = "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"
           ARM_CLIENT_SECRET       = "0gh8Q~1OYaTHAR4mfZc8egRSA6~Nv0IYZkHVUcTd"
           AAD_CLIENT_SECRET       = "0gh8Q~1OYaTHAR4mfZc8egRSA6~Nv0IYZkHVUcTd"
           TFC_AZURE_RUN_CLIENT_ID = "6d7daf56-5b56-41a6-9a6d-50bea2ca68b0"
@@ -131,7 +131,7 @@ projects = {
           ARM_CLIENT_ID           = "6d7daf56-5b56-41a6-9a6d-50bea2ca68b0"
           ARM_TENANT_ID           = "fd036ad5-08f1-4dab-947b-3b6f9462e84d"
           TFC_AZURE_PROVIDER_AUTH = "true"
-          GITHUB_TOKEN            = "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"
+          GITHUB_TOKEN            = "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"
           ARM_CLIENT_SECRET       = "0gh8Q~1OYaTHAR4mfZc8egRSA6~Nv0IYZkHVUcTd"
           AAD_CLIENT_SECRET       = "0gh8Q~1OYaTHAR4mfZc8egRSA6~Nv0IYZkHVUcTd"
           TFC_AZURE_RUN_CLIENT_ID = "6d7daf56-5b56-41a6-9a6d-50bea2ca68b0"

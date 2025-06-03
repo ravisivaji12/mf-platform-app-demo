@@ -101,15 +101,36 @@ resource "github_team_repository" "team_collaborators" {
   depends_on = [github_repository.new_repo]
 }
 
-resource "null_resource" "link_project" {
-  for_each = var.new_repo_name
+# resource "null_resource" "link_project" {
+#   for_each = var.new_repo_name
 
-  provisioner "local-exec" {
-    command = "bash gh_project_create.sh ${each.key} ${var.github_organization}"
-  }
+#   provisioner "local-exec" {
+#     command = "bash gh_project_create.sh ${each.key} ${var.github_organization}"
+#   }
 
-  depends_on = [github_repository.new_repo]
-}
+#   depends_on = [github_repository.new_repo]
+# }
+
+# resource "github_organization_project" "github_project" {
+#   name = "mf-dt-azrabc-sampleapp-ghprj"
+#   body = "This is a Organization Project"
+# }
+# resource "github_issue" "test" {
+#   repository = "mf-dt-azrabc-sampleapp-foundation-repo" #github_repository.test.name
+#   title      = "My issue title"
+#   body       = "The body of my issue"
+# }
+
+# resource "github_project_column" "todo_column" {
+#   name       = "To Do"
+#   project_id = github_organization_project.github_project.id
+# }
+
+# resource "github_project_card" "issue_card" {
+#   column_id    = github_project_column.todo_column.id
+#   content_id   = github_issue.test.id
+#   content_type = "Issue"
+# }
 
 resource "github_repository_file" "backend_tf" {
   for_each = local.workspace_map
@@ -172,7 +193,7 @@ data "azurerm_subscription" "current" {}
 resource "azuread_application_federated_identity_credential" "tfc_federated_credential_plan" {
   for_each = local.workspace_map
 
-  application_object_id = "b58ca4ea-c798-4fdf-a9a4-16a878e4fb54" #data.azuread_application.existing_app.object_id
+  application_object_id = "86a96729-1cf6-4e6b-9c31-98cc558beb7a" #data.azuread_application.existing_app.object_id
   display_name          = "${each.value.workspace_name}-plan"
   audiences             = [var.tfc_azure_audience]
   issuer                = "https://${var.tfc_hostname}"
@@ -182,9 +203,8 @@ resource "azuread_application_federated_identity_credential" "tfc_federated_cred
 
 # Federated identity credential for apply phase
 resource "azuread_application_federated_identity_credential" "tfc_federated_credential_apply" {
-  for_each = local.workspace_map
-
-  application_object_id = "b58ca4ea-c798-4fdf-a9a4-16a878e4fb54" #data.azuread_application.existing_app.object_id
+  for_each              = local.workspace_map
+  application_object_id = "86a96729-1cf6-4e6b-9c31-98cc558beb7a" #data.azuread_application.existing_app.object_id
   display_name          = "${each.value.workspace_name}-apply"
   audiences             = [var.tfc_azure_audience]
   issuer                = "https://${var.tfc_hostname}"
@@ -195,7 +215,7 @@ resource "azuread_application_federated_identity_credential" "tfc_federated_cred
 # Assign Contributor role to the existing service principal
 resource "azurerm_role_assignment" "tfc_role_assignment" {
   scope                = data.azurerm_subscription.current.id
-  principal_id         = "bc5345cb-8f05-4052-b2d5-83d6af8a9972" #data.azuread_service_principal.existing_sp.object_id
+  principal_id         = "0e2f4277-8c54-4cef-a4b4-4ca3ebd757a6" #data.azuread_service_principal.existing_sp.object_id
   role_definition_name = "Contributor"
 }
 

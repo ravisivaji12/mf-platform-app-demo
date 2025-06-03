@@ -24,13 +24,13 @@ terraform {
   # required_version = ">= 1.1.0"
 }
 provider "github" {
-  token = var.github_token != "" ? var.github_token : getenv("GITHUB_TOKEN")
-  owner = "McCainFoods"
+  token = "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" # var.github_token != "" ? var.github_token : getenv("GITHUB_TOKEN")
+  owner = "ravisivaji12"
 }
 
 provider "tfe" {
   token        = var.tfe_token
-  organization = "Mccain_Foods"
+  organization = "SivajiRaavi"
 }
 provider "azurerm" {
   features {}
